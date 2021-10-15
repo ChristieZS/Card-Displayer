@@ -1,0 +1,32 @@
+<div class="center">
+    <h3 class="details">Virtual Card Details </h3> <button class="optionButton details">Card options</button> <span class="badge status details {{card.status}}">{{card.status}}</span>
+    <div>
+        <table>
+            <tr>
+                <td rowspan="4" class="whiteBorder"><img class="cardImage" src="../../assets/virtual-cards/card-{{cardImageStatus(card.status)}}-{{card.cardScheme | lowercase}}.svg"/></td>
+                <th>ID</th>
+                <th>Cardholder name</th>
+                <th>Expiry date</th>
+                <th>PAN</th>
+            </tr>
+            <tr>
+                <td>{{card.id}}</td>
+                <td>{{card.holder.title}} {{card.holder.firstName}} {{card.holder.lastName}}</td>
+                <td>{{card.expiry}}</td>
+                <td>{{formatPAN(card.maskedPan)}}</td>
+            </tr>
+            <tr>
+                <th>Authorisation limit</th>
+                <th>Authorisations</th>
+                <th>Max. card limit</th>
+                <th>External reference</th>
+            </tr>    
+            <tr>
+                <td>{{formatMoney(card.authorisationLimit)}}</td>
+                <td>{{checkAuthorisations(card.authorisations)}} </td>
+                <td>{{formatMoney(card.limit)}}</td>
+                <td>{{card.reference}}</td>
+            </tr>    
+        </table>
+    </div>
+</div>

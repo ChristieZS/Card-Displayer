@@ -1,0 +1,82 @@
+//variables
+$detailsGrey: #f2f2f2;
+$fontGrey: #5e686d;
+$fontBlue: #5ba6d8;
+
+//media only screen
+@media only screen and (max-width: 1000px) {
+    .center {
+        margin: 0%;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .status {
+        float: right;
+    }
+}
+
+.center {
+    margin: auto;
+    width: 80%; 
+}
+
+h3, h5, button {
+    color: $fontBlue;
+}
+
+.optionButton {
+    font-size: 15px;
+    background-color: white;
+    border-color: $fontBlue;
+    border-radius: 5px;
+    padding: 3px 10px 3px 10px;
+    margin-left: 15px;
+    border-style: solid;
+}
+
+.status {
+    font-size: 14px;
+    color: white;
+    padding: 6px 8px 6px 8px;
+    font-weight: normal;
+    margin-left: 550px;
+}
+
+.ACTIVE {
+    background-color: #86be42;
+}
+
+.EXPIRED {
+    background-color: #eb3b3b;
+}
+
+.BLOCKED {
+    background-color: #faaa48;
+}
+
+.carddetails {
+    display:inline-block;
+}
+
+.cardImage {
+    height: 130px;
+}
+
+.whiteBorder {
+    background-color: white;
+}
+
+table {
+    background-color: $detailsGrey;
+    border-radius: 10px;
+    width: 1000px;
+    color: $fontGrey;
+}
+
+.details {
+    display: inline-block;
+    margin-bottom: 30px;
+}

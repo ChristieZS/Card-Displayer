@@ -1,0 +1,9 @@
+<div class="center">
+    <a *ngFor="let card of cards"
+        routerLink="/details/{{card.accountBid}}">
+
+        <h3>{{card.reference}}</h3>
+        <div>{{card.holder.title}} {{card.holder.firstName}} {{card.holder.lastName}}</div>
+        <img class="cardImage" src="../../assets/virtual-cards/card-{{cardImageStatus(card.status)}}-{{card.cardScheme | lowercase}}.svg"/>
+    </a>
+</div>
